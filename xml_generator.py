@@ -6,16 +6,16 @@ import lxml.etree as etree
 import glob
 
 ############ To Do ############
-image_path = 'convert/000000-1122-7930.jpeg'
-xmlPath = 'xml'
+image_path = '/content/Table_Detection/images/'
+xmlPath = '/content/Table_Detection/xml/'
 
-config_fname = 'config.py'
-checkpoint_path = "path to checkpoint directory"
+config_fname = '/content/Table_Detection/config.py'
+checkpoint_path = '/content/'
 epoch = 'epoch_36.pth'
 ##############################
 
 
-model = init_detector(config_fname,epoch)
+model = init_detector(config_fname, checkpoint_path + epoch)
 
 # List of images in the image_path
 imgs = glob.glob(image_path)
